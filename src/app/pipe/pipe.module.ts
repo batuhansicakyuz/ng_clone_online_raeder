@@ -1,16 +1,9 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { Component } from '@angular/core';
 
-import { AppComponent } from './header.component';
-
-@NgModule({
-  declarations: [
-    HeaderComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [HeaderComponent]
+@Component({
+  selector: 'app-hero-birthday',
+  template: "<p>The hero's birthday is {{ birthday | date }}</p>"
 })
-export class HeaderModule { }
+export class HeroBirthdayComponent {
+  birthday = new Date(1988, 3, 15); // April 15, 1988 -- since month parameter is zero-based
+}
