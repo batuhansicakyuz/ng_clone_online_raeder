@@ -5,16 +5,21 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NaviComponent } from './navi/navi.component';
 import { HeaderComponent } from './header/header.component';
+import { SelectOptionComponent } from './select-option/select-option.component';
+
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NaviComponent
+    NaviComponent,
+    SelectOptionComponent,
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
